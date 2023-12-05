@@ -1,0 +1,606 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/black.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h2>Lección 1</h2>
+					<ol>
+						<li>Introducción</li>
+						<li>Tipos de datos en Python (Ejercicio 1 & 2)</li>
+					</ol>
+				</section>
+				<section>
+					<section>
+						<h2>Presentación del profe</h2>
+						<div>
+							<img src="dist/img/foto_profesional.png" class="roundedxl" />
+						</div>
+						<p><b>Simon David</b> Gsponer</p>
+					</section>
+					<section>
+						<h2>Experiencia Profesional</h2>
+						<div>
+							<img src="dist/img/IBM.png" width="25%"/>
+						</div>
+						<div class="r-fit-text">
+							<ul>
+								<li>prevención del blanqueo de capitales</li>
+								<li>combinación de vision artificial y análisis de texto para comprobar etiquetas</li>
+								<li>análisis de encuestas internacionales (> 2 MM de datos)</li>
+								<li>estimación del malgasto industrial de alimentos al nivel mundial</li>
+								<li>análisis de textos de gran escala (>30 idiomas; > 1 M de mensajes)</li>
+							</ul>
+						</div>
+					</section>
+					<section>
+						<h2 class>Educación</h2>
+						<div class="container">
+
+							<div class="col">
+								<img src="dist/img/google_cloud.png" height="150px"/>
+							</div>
+							
+							<div class="col">
+								<img src="dist/img/LSE.png" class="rounded" />
+							</div>
+
+							<div class="col">
+								<img src="dist/img/UZH.png" class="rounded" />
+							</div>
+							
+							</div>
+							<div class="container">
+
+								<div class="col">
+									<!-- <img src="https://via.placeholder.com/150" class="rounded" /> -->
+									Certificados de Google Cloud
+								</div>
+								
+								<div class="col">
+									<!-- <img src="https://via.placeholder.com/150" class="rounded" /> -->
+									London School of Economics
+								</div>
+	
+								<div class="col">
+									<!-- <img src="https://via.placeholder.com/150" class="rounded" /> -->
+									Universidad de Zurich
+								</div>
+								
+								</div>
+					
+					</section>
+			</section>
+			<section>
+				<section data-background="dist/img/google_trends_data_science.png">
+					<div style="position: absolute; width: 60%; right: 0; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px; font-size: 20px; text-align: left;">
+						<h2>¿Por qué aprender ciencia de datos?</h2>
+						<p>La ciencia de datos sigue siendo una de las profesiones más buscadas, mejor pagadas y más floreciente del siglo XXI.</p>
+					</div>
+				</section>
+				<section>
+					<h2>Perfil de Salida</h2>
+					<p class="orange_txt"><b>Este curso te da todas las herramientas para empezar un trabajo en análisis de datos!</b></p>
+					<div>
+						<ul>
+							<li>Uso de las sentencias más comunes de Python en análisis de datos</li>
+							<li>Habilidad de crear gráficos profesionales usando conjuntos al nivel empresarial</li>
+							<li>Habilidad de analizar conjuntos de datos al nivel empresarial</li>
+						</ul>
+					</div>
+					</section>
+				<section>
+					<h2>Temario</h2>
+					<table class="r-fit-text">
+						<tr>
+						  <th>Lección 1</th>
+						  <td>Introducción, Tipos de Datos</td>
+						  <td>Tarea 1</td>
+						</tr>
+						<tr>
+						  <th>Lección 2</th>
+						  <td>Envases, Sentencias For, Comprensiones</td>
+						  <td>Tarea 2</td>
+						</tr>
+						<tr>
+							<th>Lección 3</th>
+							<td>Funciones, Sentencias Condicionales</td>
+							<td>Tarea 3</td>
+						  </tr>
+						  <tr>
+							<th>Lección 4</th>
+							<td>Pandas I</td>
+							<td> - </td>
+						  </tr>
+						  <tr>
+							<th>Lección 5</th>
+							<td>Pandas II</td>
+							<td>Tarea 4</td>
+						  </tr>
+						  <tr>
+							<th>Lección 6</th>
+							<td>Seaborn</td>
+							<td>Tarea 5</td>
+						  </tr>
+						  <tr>
+							<th>Lección 7</th>
+							<td>Análisis integral de un conjunto de datos I</td>
+							<td>Tarea 6</td>
+						  </tr>
+						  <tr>
+							<th>Lección 8</th>
+							<td>Análisis integral de un conjunto de datos II</td>
+							<td>-</td>
+						  </tr>
+					  </table>
+				</section>
+
+			<section>
+				<section>
+					<h2>Nuestros Cursos</h2>
+					<table class="r-fit-text">
+						<thead>
+							<tr>
+								<th>Curso</th>
+								<th>Nivel</th>
+								<th>Enlace</th>
+								<th>Costo</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr class="orange_txt">
+								<td><b>Base en Ciencia de Datos</b></td>
+								<td>Principiante</td>
+								<td>…</td>
+								<td>₡ 60 000</td>
+							</tr>
+							<tr class="orange_txt">
+								<td>Intermedio en Ciencia de Datos</td>
+								<td>Intermedio</td>
+								<td>…</td>
+								<td>₡ 120 000</td>
+							</tr>
+							<tr class="orange_txt">
+								<td>Dominio de Ciencia de Datos</td>
+								<td>Avanzado</td>
+								<td>…</td>
+								<td>₡ 180 000</td>
+							</tr>
+							<tr class="purple_txt">
+								<td>Base en Ingeniería de IA</td>
+								<td>Intermedio</td>
+								<td>…</td>
+								<td>₡ 120 000</td>
+							</tr>
+							<tr class="purple_txt">
+								<td>Curso Técnico de modelos <br/>de lenguage (ChatGPT etc.)</td>
+								<td>Avanzado</td>
+								<td>…</td>
+								<td>₡ 240 000</td>
+							</tr>
+							<tr class="purple_txt">
+								<td>Curso Técnico de Visión Artificial</td>
+								<td>Avanzado</td>
+								<td>…</td>
+								<td>₡ 240 000</td>
+							</tr>
+							<tr class="purple_txt">
+								<td>Curso Técnico de Series de Tiempo</td>
+								<td>Avanzado</td>
+								<td>…</td>
+								<td>₡ 240 000</td>
+							</tr>
+							<tr class="blue_txt">
+								<td>Análisis de Datos de Gran Escala</td>
+								<td>Intermedio</td>
+								<td>…</td>
+								<td>₡ 180 000</td>
+							</tr>
+							<tr class="blue_txt">
+								<td>Diseño de presentaciones en HTML</td>
+								<td>Principiante</td>
+								<td>…</td>
+								<td>₡ 90 000</td>
+							</tr>
+						</tbody>
+					</table>
+				</section>
+			
+		</section>
+	</section>
+				<section data-background-iframe="https://seaborn.pydata.org/">
+					<div style="position: absolute; width: 60%; right: 0; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px; font-size: 20px; text-align: left;">
+						<h2>seaborn</h2>
+						<p>La herramienta perfecta para crear gráficas mostrando información agregada. (Diapositiva preliminar)</p>
+					</div>
+				</section>
+				<section data-background-iframe="https://pandas.pydata.org/docs/">
+					<div style="position: absolute; width: 60%; right: 0; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px; font-size: 20px; text-align: left;">
+					<h2>pandas</h2>
+					<p>Un de los paquetes más usados para analizar datos en Python que es muy popular en el mundo laboral. (Diapositiva preliminar)</p>
+					</div>
+				</section>
+				<section>
+					<h1>Parte 2: Tipos de datos en Python</h1>
+				</section>
+				<section data-auto-animate>
+					<h2 data-id="code-title">Primeros pasos en Python</h2>
+					<pre data-id="code-animation"><code class="python" data-trim data-line-numbers="|1-3|6-9|11-12|14-15|18-21|24-27|29-31|34-39|42-46|48-51|54-64"><script type="text/template">
+						palabras_lindas = "¡Hola a todos!"
+						print(palabras_lindas)
+						# 🖨️: ¡Hola a todos!
+						
+						
+						edad_simón = 30
+						edad_mi_hermana = 31
+						print(edad_mi_hermana > edad_simón)
+						# 🖨️: True (verdadero en inglés)
+
+						print(edad_mi_hermana + edad_simón)
+						# 🖨️: 61
+
+						print(edad_mi_hermana - edad_simón)
+						# 🖨️: 1
+						
+
+						uso_dispositivos = 6.61
+						uso_dispositivos_mins = uso_dispositivos * 60
+						print(uso_dispositivos_mins)
+						# 🖨️: 396.6
+
+
+						n_provincias_arg = 23
+						n_regiones_chl = 16
+						print(n_provincias_arg == n_regiones_chl)
+						# 🖨️: False (falso en inglés)
+
+						es_igual = n_provincias_arg == n_regiones_chl
+						print(es_igual)
+						# 🖨️: False
+
+						
+						codigo_curso = "SCL101"
+						version_mayor_python = 3
+						print(type(codigo_curso))
+						# 🖨️: str
+						print(type(version_mayor_python))
+						# 🖨️: int
+
+
+						una_variable = 1
+						una_variable = 100
+						print(una_variable)
+						# 🖨️: 100
+						# 🚨 ¡La segunda asignación de 100 sobreescribe la primera!
+
+						otra_variable = True
+						Print(una_variable)
+						# 🖨️: NameError: name 'Print' is not defined
+						# 🚨 ¡Python es sensible a may/minúsculas!
+
+
+						un_numero_con_decimales = 4.41
+						print(un_numero_con_decimales)
+						print(type(un_numero_con_decimales))
+						# 🖨️: 4.41
+						# 🖨️: <class 'float'>
+						eso_no_es_un_numero = 4, 41
+						print(eso_no_es_un_numero)
+						print(type(eso_no_es_un_número))
+						# 🖨️: (4, 41)
+						# 🖨️: <class 'tuple'>
+						# 🚨 ¡Los números decimales van con punto y no con coma!
+					</script></code></pre>
+					<p>Si te cuesta encontrar los caracteres especiales en tu teclado, creamos un <a href="https://github.com/SwissCodeLearning/base_ciencia_de_datos#glosario" target="blank">glosario</a> con todos los atajos!</p>
+
+				</section>
+
+				<section>
+					<h2>Sintaxis en los ejemplos</h2>
+					<table class="r-fit-text">
+						<thead>
+							<tr>
+								<th>Declaración/Operador</th>
+								<th>Funcionalidad</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><code>=</code></td>
+								<td>Asigna cosas a variables</td>
+							</tr>
+							<tr>
+								<td><code>==</code></td>
+								<td>Indica 'igualdad' entre dos cosas</td>
+							</tr>
+							<tr>
+								<td><code>+, -, *, /</code></td>
+								<td>Adición, resta, multiplicación, división</td>
+							</tr>
+							<tr>
+								<td><span style="color: #a6e22e">print</span>(…)</td>
+								<td>Devuelve cosas para verlas</td>
+							</tr>
+							<tr>
+								<td><span style="color: #a6e22e">type</span>(…)</td>
+								<td>Identifica el tipo de una cosa</td>
+							</tr>
+						</tbody>
+					</table>
+				</section>
+				<section>
+					<h2>Tipos de datos estándar</h2>
+					<table class="r-fit-text">
+						<thead>
+							<tr>
+								<th>Nombre</th>
+								<th>Inglés</th>
+								<th>Ejemplos</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>número entero</td>
+								<td>integer</td>
+								<td>version_mayor_python = 3<br/>version_mayor_python = int(3)</td>
+							</tr>
+							<tr>
+								<td>número en coma flotante</td>
+								<td>floating point number</td>
+								<td>uso_dispositivos_mins = 396.6 uso_dispositivos_mins = float(396.6)</td>
+							</tr>
+							<tr>
+								<td>booleano</td>
+								<td>boolean</td>
+								<td> es_igual = 3 == 3 <br/>estoy_en_costa_rica = True</td>
+							</tr>
+							<tr>
+								<td>cadena de caracteres</td>
+								<td>string</td>
+								<td>palabras_lindas = "¡Hola a todos!" <br/> numero_como_cadena = str(3)</td>
+							</tr>
+						</tbody>
+					</table>
+				</section>
+
+				<section data-auto-animate>
+					<h2 data-id="code-title">Números enteros</h2>
+					<pre data-id="code-animation"><code class="python" data-trim data-line-numbers="|1-2|4-5|7-9|11-13|15-17|19-21|23-25|27-29|31-32|34-35"><script type="text/template">
+						print(f"Dos ejemplos de números enteros: {5}, {-3}")
+						# 🖨️: Dos ejemplos de números enteros: 5, -3
+
+						print(f"Conversion a número entero: {int(5.5)}, {int(5.8)}")
+						# 🖨️: Conversion a número entero: 5, 5
+						
+						x = 390480475878994859
+						print(f"x es `{x}`; tipo `{type(x)}`")
+						# 🖨️: x es `390480475878994859`; tipo `<class 'int'>`
+
+						x = 1_000_000_000
+						print(x)
+						# 🖨️: 1000000000
+						
+						y = 0  # está bien
+						y = 04  # eso produce un error
+						# SyntaxError: leading zeros in decimal integer literals are not permitted…
+
+						resultado = 13 // 4
+						print(f"división entera: 13 // 4 = {resultado}")
+						# 🖨️: división entera: 13 // 4 = 3
+
+						resultado = 13 % 4
+						print(f"resto de división entera: 13 % 4 = {resultado}")
+						# 🖨️: resto de división entera: 13 % 4 = 1
+
+						resultado = divmod(13, 4)
+						print(f"división entera y el resto: {resultado}")
+						# 🖨️: división entera y el resto: (3, 1)
+
+						print(f"x elevado a y: 3 ** 4 = {3 ** 4}")
+						# 🖨️: x elevado a y: 3 ** 4 = 81
+
+						print(f"x elevado a y, usando la función pow(…): {pow(3, 4)}")
+						# 🖨️: x elevado a y, usando la función pow(…): 81
+
+					</script></code></pre>
+
+				</section>
+
+				<section data-auto-animate>
+					<h2 data-id="code-title">Números en coma flotante</h2>
+					<pre data-id="code-animation"><code class="python" data-trim data-line-numbers="|1-2|4-5|7-9|11-14|16-18|20-22"><script type="text/template">
+						print(f"Números enteros: {5}, {-3}")
+						# 🖨️: Números enteros: 5, -3
+
+						print(f"Números en coma flotante: {5.0}, {float(-3)}")
+						# 🖨️: Números en coma flotante: 5.0, -3.0
+
+						x = 1_000_000_000.0
+						print(x)
+						# 🖨️: 1000000000.0
+
+						y = 0.0  # está bien
+						y = 04.0  # eso también!!
+						print(y)
+						# 🖨️: 4.0
+
+						y = divmod(3.5, 1.5)
+						print(f"división entera y el resto: {y}")
+						# división entera y el resto: (2.0, 0.5)
+
+						z = pow(3.5, 1.5)
+						print(z)
+						# 🖨️: 6.547900426854397
+					</script></code></pre>
+					<p>Números enteros y en coma flotante permiten las mismas operaciones.</p>
+
+				</section>
+				<section>
+					<h2 class="r-fit-text">¿Por qué nos importa la diferencia?</h2>
+
+					<div>
+						<ul class="r-fit-text">
+							<li>Unos datos, por ejemplo 'número de ruedas de un vehículo', 'número de clientes por día' o 'número de compras en una página de web', son mejor representados por números enteros para control de calidad.</li>
+							<li>Números enteros son precisos, mientras los en coma flotante son imprecisos. Es una diferencia técnica que veremos en la próxima diapositiva, pero volveremos a verla más adelante cuando usemos numpy y pandas.</li>
+						</ul>
+
+					</div>
+					
+				</section>
+				<section>
+					<h2 class="r-fit-text">Ejemplo de imprecisión numérica</h2>
+
+					<pre data-id="code-animation"><code class="python" data-trim data-line-numbers="|1-4|6-9|11-12"><script type="text/template">
+						x = 1
+						y = 3
+						print(y == x + x + x)
+						# 🖨️: True
+						
+						x = 0.1
+						y = 0.3
+						print(y == x + x + x)
+						# 🖨️: False
+						
+						print(format(0.1, '.30g'))
+						# 🖨️: 0.100000000000000005551115123126
+					</script></code></pre>
+					<p class="r-fit-text">¿Por qué pasa eso? En nuestro sistema de números del día cotidiano, que sigue la base de diez, dividir 1 entre 3 nunca nos da un resultado preciso (0.3333333333…); en una manera parecida, los números de las computadoras, que siguen una base de dos (binario), tienen muchos más números imprecisos.</p>
+					
+				</section>
+				<section>
+					<h2>Introducción a Google Colab</h2>
+					<p><a href="https://colab.research.google.com/" target="blank">https://colab.research.google.com/</a></p>
+				</section>
+				<section data-background="dist/img/GoogleColab.gif">
+					<div style="position: absolute; width: 60%; right: 0; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px; font-size: 20px; text-align: left;">
+						<h2>Llegó la hora del primer ejercicio!</h2>
+						<p>Haz clic <a href="https://colab.research.google.com/drive/1kqSi1-OgNaHqVoDonh-U9dJI7TpcdngX?hl=es" target="blank">aquí</a>, crea una copia (Archivo, Guardar, Guardar una copia en Drive), clic 'Conectar' y resuelve los ejercicios. Tienes <a href="https://vclock.com/timer/#countdown=00:30:00" target="blank">30min</a> para resolverlos.</p>
+					</div>
+				</section>
+				<section>
+					<h2>Cadena de caracteres</h2>
+					<pre data-id="code-animation"><code class="python" data-trim data-line-numbers="|1-5|7-9|11-13|15-23|25-28|30-33|35-38"><script type="text/template">
+						mensaje = "¡Hola"
+						otro_mensaje = "a todos!"
+						mensaje_sin_espacio = mensaje + otro_mensaje
+						print(mensaje_sin_espacio)
+						# 🖨️: ¡Holaa todos!
+
+						mensaje_entero = mensaje + " " + otro_mensaje
+						print(mensaje_entero)
+						# 🖨️: ¡Hola a todos!
+
+						mensaje = "tengo sed " * 3
+						print(mensaje)
+						# 🖨️: tengo sed tengo sed tengo sed 
+
+						mensaje_grande = """
+						Eso es un mensaje más
+						grande que se encuentra
+						en varias lineas.
+						"""
+						print(mensaje_grande)
+						# 🖨️: Eso es un mensaje más
+						# grande que se encuentra
+						# en varias lineas.
+
+						otro_mensaje_grande = "Python me encanta 🐍,\n hojas de cálculo no tanto."
+						print(otro_mensaje_grande)
+						# 🖨️: Python me encanta 🐍,
+						# hojas de cálculo no tanto.
+
+						no_mi_opinion = "Cartagena es la mejor ciudad de Colombia. Cartagena está linda."
+						mi_opinion = no_mi_opinion.replace("Cartagena", "Medellín")
+						print(mi_opinion)
+						# 🖨️: Medellín es la mejor ciudad de Colombia. Medellín está linda.
+
+						no_mi_opinion = "Cartagena es la mejor ciudad de Colombia. Cartagena está linda."
+						mi_opinion = no_mi_opinion.replace("Cartagena", "Medellín", 1)
+						print(mi_opinion)
+						# 🖨️: Medellín es la mejor ciudad de Colombia. Cartagena está linda.
+					</script></code></pre>
+					<p class="r-fit-text">Cuando usamos cadena de caracteres, concatenamos con '+' y repitimos con '*'. Para asignar una cadena de caracteres que cabe más de una linea, usamos tres comillas o <span style="color: #a6e22e">\n</span> (newline, o sea 'nueva linea'). Se puede remplazar palabras usando .replace(<span style="color: #a6e22e">"palabra_no_deseada"</span>, <span style="color: #a6e22e">"nueva_palabra"</span>)</p>
+					
+				</section>
+
+				<section>
+					<h2>Tipo booleano</h2>
+
+					<pre data-id="code-animation"><code class="python" data-trim data-line-numbers="|1-3|5-7|9-12|14-17|19-22|24-26|28-30"><script type="text/template">
+						comparacion = 5 > 3
+						print(comparacion)
+						# 🖨️: True
+
+						otra_comparacion = "Boca Juniors" == "River"
+						print(otra_comparacion)
+						# 🖨️: False
+
+						x = bool(1)
+						y = bool(0)
+						print(f"x es ->{x}<- y y es ->{y}<-")
+						# 🖨️: x es ->True<- y y es ->False<-
+						
+						x = bool(0.00001)
+						y = bool(0.0)
+						print(f"x es ->{x}<- y y es ->{y}<-")
+						# 🖨️: x es ->True<- y y es ->False<-
+
+						x = bool("")
+						y = bool("Perú")
+						print(f"x es ->{x}<- y y es ->{y}<-")
+						# 🖨️: x es ->False<- y y es ->True<-
+						
+						x = True
+						print(x + 1)
+						# 🖨️: 2
+
+						y = False
+						print(y + 1)
+						# 🖨️: 1
+					</script></code></pre>
+					<p class="r-fit-text">Los booleanos se usan para guardar información que es verdadero o falso como 'tiene_iphone' (tienes un iphone, o no; son las únicas opciones) o para comprobar condiciones lógicas. Más adelante, veremos otros usos como implementar secuencias lógicas y filtrar un conjunto de datos usando una condiciones lógicas.</p>
+					
+				</section>
+				<section>
+					<h2 class="r-fit-text">¡Llegó la hora del segundo ejercicio!</h2>
+					<p>Vuelve a tu cuaderno de Google Colab y resuelve los ejercicios 2.1 a 2.9. Tienes <a href="https://vclock.com/timer/#countdown=00:30:00" target="blank">30min</a>  para resolverlos.</p>
+				</section>
+				<section>
+					<h1>¡Ya está, gracias por su atención!</h1>
+					
+					<p>Haz clic <a href="https://docs.google.com/forms/d/e/1FAIpQLSc9z4LojL7QWPY-Z8zKoCaGRB-2uBmoqXSnb1Zo4-E__A74_Q/viewform?usp=sf_link" target="blank">aquí</a> para acceder a la tarea, la que necesitas entregar antes de la próxima lección. Tienen que entregarla 2 horas antes de la siguiente lección.</p>
+				</section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+				slideNumber: 'c/t',
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
