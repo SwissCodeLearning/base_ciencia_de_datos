@@ -113,7 +113,7 @@
 						</tr>
 						<tr>
 						  <th>Lección 2</th>
-						  <td>Envases, Sentencias For, Comprensiones</td>
+						  <td>Envases, Bucle For, Comprensiones</td>
 						  <td>Tarea 2</td>
 						</tr>
 						<tr>
@@ -123,17 +123,17 @@
 						  </tr>
 						  <tr>
 							<th>Lección 4</th>
-							<td>Pandas I</td>
+							<td>Pandas I (trabajar con conjuntos de datos)</td>
 							<td> - </td>
 						  </tr>
 						  <tr>
 							<th>Lección 5</th>
-							<td>Pandas II</td>
+							<td>Pandas II (trabajar con conjuntos de datos)</td>
 							<td>Tarea 4</td>
 						  </tr>
 						  <tr>
 							<th>Lección 6</th>
-							<td>Seaborn</td>
+							<td>Seaborn (graficar)</td>
 							<td>Tarea 5</td>
 						  </tr>
 						  <tr>
@@ -305,7 +305,6 @@
 						# 🖨️: <class 'tuple'>
 						# 🚨 ¡Los números decimales van con punto y no con coma!
 					</script></code></pre>
-					<p>Si te cuesta encontrar los caracteres especiales en tu teclado, creamos un <a href="https://github.com/SwissCodeLearning/base_ciencia_de_datos#glosario" target="blank">glosario</a> con todos los atajos!</p>
 
 				</section>
 
@@ -492,7 +491,7 @@
 					</div>
 				</section>
 				<section>
-					<h2>Cadena de caracteres</h2>
+					<h2>Cadena de caracteres I/II</h2>
 					<pre data-id="code-animation"><code class="python" data-trim data-line-numbers="|1-5|7-9|11-13|15-23|25-28|30-33|35-38"><script type="text/template">
 						mensaje = "¡Hola"
 						otro_mensaje = "a todos!"
@@ -538,6 +537,35 @@
 				</section>
 
 				<section>
+					<h2>Cadena de caracteres II/II</h2>
+					<pre data-id="code-animation"><code class="python" data-trim data-line-numbers="|1-3|5-7|9-12|14-18"><script type="text/template">
+						un_texto = "Hola, ¿cómo estás?"
+						print(un_texto.startswith("Hola"))
+						# 🖨️: True
+		
+						un_texto = "Hola, ¿cómo estás?"
+						print(un_texto.endswith("Hola"))
+						# 🖨️: False
+		
+						un_texto = "Hola, ¿cómo estás?"
+						resultado = "cómo" in un_texto
+						print(resultado)
+						# 🖨️: True
+
+						un_texto = "Hola, ¿cómo estás?"						
+						print(un_texto.lower())
+						# 🖨️: hola, ¿cómo estás?
+						print(un_texto.upper())
+						# 🖨️: HOLA, ¿CÓMO ESTÁS?
+					</script></code></pre>
+					<p class="r-fit-text">.startswith(<span class="editor-green">"texto"</span>) (inglés para "empieza con") comprueba si la cadena de caracteres empieza con el texto especificado; .endswith(<span class="editor-green">"texto"</span>) (inglés para "termina con") comprueba si la cadena termina con el texto especificado; <span class="editor-pink">in</span> (inglés "dentro") verifica si el texto está dentro de la cadena de caracteres; .lower()/.upper() transforma la cadena en minúsculas/mayúsculas</p>
+					
+				</section>
+
+
+
+
+				<section>
 					<h2>Tipo booleano</h2>
 
 					<pre data-id="code-animation"><code class="python" data-trim data-line-numbers="|1-3|5-7|9-12|14-17|19-22|24-26|28-30"><script type="text/template">
@@ -577,7 +605,7 @@
 				</section>
 				<section>
 					<h2 class="r-fit-text">¡Llegó la hora del segundo ejercicio!</h2>
-					<p>Vuelve a tu cuaderno de Google Colab y resuelve los ejercicios 2.1 a 2.9. Tienes <a href="https://vclock.com/timer/#countdown=00:30:00" target="blank">30min</a>  para resolverlos.</p>
+					<p>Vuelve a tu cuaderno de Google Colab y resuelve los ejercicios 2.1 a 2.10. Tienes <a href="https://vclock.com/timer/#countdown=00:30:00" target="blank">30min</a>  para resolverlos.</p>
 				</section>
 				<section>
 					<h1>¡Ya está, gracias por su atención!</h1>
