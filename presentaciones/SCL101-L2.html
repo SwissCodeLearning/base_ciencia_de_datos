@@ -1,0 +1,514 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/black.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h2>Lección 2</h2>
+					<ol>
+						<li>Envases</li>
+						<li>El Bucle For</li>
+						<li>Comprensiones</li>
+					</ol>
+				</section>
+				<section>
+					<h1>Parte 1: Los envases principales de Python</h1>
+						
+				</section>
+				<section>
+					<h2>Resumen</h2>
+					<table class="r-fit-text">
+						<thead>
+							<tr>
+								<th>Nombre</th>
+								<th>En Inglés</th>
+								<th>Uso</th>
+								<th>Ejemplos</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>lista</td>
+								<td>list</td>
+								<td>colección de cosas, como una bolsa donde se mete todo</td>
+								<td>x = [1, 2, 2, 3] </br> y = list([1, 2, 3])</td>
+							</tr>
+							<tr>
+								<td>diccionario</td>
+								<td>dictionary</td>
+								<td>relaciona claves con valores; la clave debe ser una cadena de caracteres, el valor cualquier cosa</td>
+								<td>x = {"primer_numero": 1, "segundo_numero": 2} </br> y = dict(primer_numero=1, segundo_numero=2)</td>
+							</tr>
+							<tr>
+								<td>conjunto</td>
+								<td>set</td>
+								<td>Un conjunto de matemática, cada elemento es único.</td>
+								<td>y = type({1, 2}) <br/>y = set([1, 2])</td>
+							</tr>
+							<tr>
+								<td>tupla</td>
+								<td>tuple</td>
+								<td>Como una lista, pero no se puede modificar después.</td>
+								<td>x = (1,) <br/> x = tuple([1, 2])</td>
+							</tr>
+						</tbody>
+					</table>
+					<p class="r-fit-text">No profundizaremos mucho en tuplas porque apenas se usan en análisis de datos.</p>
+				</section>
+
+				<section>
+					<h2>Listas</h2>
+
+					<pre data-id="code-animation"><code class="python" data-trim data-line-numbers="|1-4|6-8|11-14|16-22|25-28|30-33|35-37|39-42|44-46|48-50|52-53|55-56|58-60"><script type="text/template">
+						centroamerica = ['Costa Rica', 'El Salvador', 'Nicaragua']
+						centroamerica.append('Guatemala')
+						print(f"Centroamérica 1: {centroamerica}")
+						# 🖨️: Centroamérica 1: ['Costa Rica', 'El Salvador', 'Nicaragua', 'Guatemala']
+
+						centroamerica.insert(0, 'Honduras')
+						print(f"Centroamérica 2: {centroamerica}")
+						# 🖨️: Centroamérica 2: ['Honduras', 'Costa Rica', 'El Salvador', 'Nicaragua', 'Guatemala']
+
+
+						geograficamente_centroamerica = ['Belice', 'Panamá']
+						centroamerica.extend(geograficamente_centroamerica)
+						print(f"Centroamérica 3: {centroamerica}")
+						# 🖨️: Centroamérica 3: ['Honduras', 'Costa Rica', 'El Salvador', 'Nicaragua', 'Guatemala', 'Belice', 'Panamá']
+						
+						# dos otras maneras de extender una lista:
+						centroamerica = centroamerica + ["Suchitoto", "Copán"]
+						print(f"Centroamérica 4: {centroamerica}")
+						# 🖨️: Centroamérica 4: ['Honduras', 'Costa Rica', 'El Salvador', 'Nicaragua', 'Guatemala', 'Belice', 'Panamá', 'Suchitoto', 'Copán']
+						centroamerica += ["Canal de Panamá", "Tikal"]
+						print(f"Centroamérica 5: {centroamerica}")
+						# 🖨️: Centroamérica 5: ['Honduras', 'Costa Rica', 'El Salvador', 'Nicaragua', 'Guatemala', 'Belice', 'Panamá', 'Suchitoto', 'Copán', 'Canal de Panamá', 'Tikal']
+
+
+						# ⚠️ IMPORTANTE ⚠️
+						centroamerica_alternativa = centroamerica.append('Colombia')
+						print(centroamerica_alternativa)
+						# 🖨️: None
+
+						numeros = [1, 2, 3_000_000, 4]
+						numeros.reverse()
+						print(numeros)
+						# 🖨️: [4, 3000000, 2, 1]
+
+						paises = ['Argentina', 'Argentina', 'Bolivia', 'Clmbia', 'Chile', 'Ecuador']
+						print(paises)
+						# 🖨️: ['Argentina', 'Argentina', 'Bolivia', 'Clmbia', 'Chile', 'Ecuador']
+						
+						print(paises[2])
+						# 🖨️: Bolivia
+						print(paises[2:4])
+						# 🖨️: ['Bolivia', 'Clmbia']
+
+						paises[1] = 'Colombia'
+						print(paises)
+						# 🖨️: ['Argentina', 'Colombia', 'Bolivia', 'Clmbia', 'Chile', 'Ecuador']
+
+						paises[2:5] = ['BRASIL', 'URUGUAY']  # modificando 3 elementos con 2 elementos deja 2 elementos
+						print(paises)
+						# 🖨️: ['Argentina', 'Colombia', 'BRASIL', 'URUGUAY', 'Ecuador']
+
+						print(paises[-1])
+						# 🖨️: Ecuador
+
+						print(len(paises))
+						# 🖨️: 5
+
+						gastos_usd = [4, 9, 12, 30]
+						print(sum(gastos_usd))
+						# 🖨️: 55
+					</script></code></pre>
+					<p class="r-fit-text">.append() agrega un elemento; .insert() inserta un elemento en el índice especificado; .extend() agrega otra lista; .reverse() invierte; lista[2] devuelve/reasigna el elemento con índice 2; lista[2:4] devuelve/reasigna los elementos con índice 2 y 3, pero sin elemento con índice 4; lista[-1] devuelve el último elemento; <span style="color: #a6e22e">len</span>() da el número de elementos; <span style="color: #a6e22e">sum</span>() da la suma; </p>
+					
+				</section>
+
+				<section>
+					<h2>Diccionarios</h2>
+
+					<pre data-id="code-animation"><code class="python" data-trim data-line-numbers="|1-7|10-11|14-17|20-27|30-33|36-38|41-43|46-48|51-53|56-66"><script type="text/template">
+						poblaciones_latam = {
+							'ARG': 46_044_703,
+							'COL': 52_215_503,
+							'BRA': 218_689_757
+						}
+						print(poblaciones_latam)
+						# 🖨️: {'ARG': 46044703, 'COL': 52215503, 'BRA': 218689757}
+
+
+						print(len(poblaciones_latam))
+						# 🖨️: 3
+
+
+						x = poblaciones_latam['COL']
+						y = poblaciones_latam.get('BRA')
+						print(x, y)
+						# 🖨️: 52215503, 218689757
+
+						
+						poblaciones_latam['PAN'] = 4_279_000
+						print(poblaciones_latam)
+						# 🖨️: {'ARG': 46044703, 'COL': 52215503, 'BRA': 218689757, 'PAN': 4279000}
+						x = poblaciones_latam.pop('PAN')
+						print(x)
+						# 🖨️: 4279000
+						print(poblaciones_latam)
+						# 🖨️: {'ARG': 46044703, 'COL': 52215503, 'BRA': 218689757}
+
+
+						poblaciones_latam['PER'] = 32_440_172 
+						poblaciones_latam['ARG'] += 1
+						print(poblaciones_latam)
+						# 🖨️: {'ARG': 46044704, 'COL': 52215503, 'BRA': 218689757, 'PER': 32440172}
+
+
+						poblaciones_latam_valores = list(poblaciones_latam.values())
+						print(poblaciones_latam_valores)
+						# 🖨️: [46044704, 52215503, 218689757, 32440172]
+
+
+						suma_poblaciones = sum(poblaciones_latam.values())
+						print(suma_poblaciones)
+						# 🖨️: 316949963
+
+
+						poblaciones_latam_claves = list(poblaciones_latam.keys())
+						print(poblaciones_latam_claves)
+						# 🖨️: ['ARG', 'COL', 'BRA', 'PER']
+
+
+						poblaciones_latam_pares = list(poblaciones_latam.items())
+						print(poblaciones_latam_pares)
+						# 🖨️: [('ARG', 46044704), ('COL', 52215503), ('BRA', 218689757), ('PER', 32440172)]
+
+
+						dict_a = {
+							"a": True,
+							"b": False
+						}
+						dict_b = {
+							"c": 1,
+							"d": True
+						}
+						dict_c = dict_a | dict_b
+						print(dict_c)
+						# 🖨️: {'a': True, 'b': False, 'c': 1, 'd': True}
+
+					</script></code></pre>
+					<p class="r-fit-text"><span style="color: #a6e22e">len</span>() da el número de pares; .get(<span style="color: #a6e22e">"clave"</span>) devuelve el valor de "clave"; .pop(<span style="color: #a6e22e">"clave"</span>) es como .get(<span style="color: #a6e22e">"clave"</span>) pero también borra el par del diccionario; .values() devuelve todos los valores; .keys() todos los claves; .items() todos los pares en una lista de tuples; diccionarios se pueden concatenar usando el símbolo '|'.</p>
+					
+				</section>
+
+
+				<section>
+					<h2>Conjuntos</h2>
+
+					<pre data-id="code-animation"><code class="python" data-trim data-line-numbers="|1-4|6-8|10-12|14-16"><script type="text/template">
+						cono_sur = {'Argentina', 'Argentina', 'Chile', 'Uruguay', 'Paraguay'}
+						mercosur = {'Argentina', 'Uruguay', 'Paraguay', 'Brasil'}
+						print(cono_sur)
+						# 🖨️: {'Chile', 'Argentina', 'Paraguay', 'Uruguay'}
+
+						x = cono_sur.union(mercosur)
+						print(f"1: {x}")
+						# 🖨️: 1: {'Argentina', 'Chile', 'Brasil', 'Paraguay', 'Uruguay'}
+						
+						x = cono_sur.intersection(mercosur)
+						print(f"2: {x}")
+						# 🖨️: 2: {'Argentina', 'Paraguay', 'Uruguay'}
+						
+						x = mercosur.difference(cono_sur)
+						print(f"3: {x}")
+						# 🖨️: 3: {'Brasil'}
+					</script></code></pre>
+					<p class="r-fit-text"><code>.union()</code> une elementos únicos de dos conjuntos; <code>.intersection()</code> identifica elementos compartidos; <code>.difference()</code> identifica elementos que están en el primer conjunto pero no en el segundo</p>					
+				</section>		
+				
+				<section>
+					<h2>Tuplas</h2>
+
+					<pre data-id="code-animation"><code class="python" data-trim data-line-numbers="|1-3|5-7|9-12|14-20"><script type="text/template">
+						gran_colombia = ('Panamá', 'Venezuela', 'Colombia', 'Ecuador')
+						print(id(gran_colombia))# 
+						# 🖨️: 140507864476592
+
+						gran_colombia = gran_colombia + ('Canal de Panamá',)
+						print(id(gran_colombia))
+						# 🖨️: 140508097596208
+
+						print(gran_colombia[0])
+						# 🖨️: Panamá
+						print(gran_colombia[0:2])
+						# 🖨️: ('Panamá', 'Venezuela')
+						
+						# comparación con una lista
+						gran_colombia_lista = ['Panamá', 'Venezuela', 'Colombia', 'Ecuador']
+						print(id(gran_colombia_lista))
+						# 🖨️: 140140633724288
+						gran_colombia_lista.extend(['Canal de Panamá'])
+						print(id(gran_colombia_lista))
+						# 🖨️: 140140633724288
+					</script></code></pre>
+					<p class="r-fit-text">Para ustedes, lo más importante es reconocer tuplas y extraer información de ellas. </br>La función <span style="color: #a6e22e">id</span>() permite ver la dirección del objeto en memoria de la computadora.</p>
+				</section>
+
+				<section>
+					<h1>Parte 2: El Bucle for</h1>
+				</section>
+				<section>
+					<h2>Uso principal</h2>
+					<pre data-id="code-animation"><code class="python" data-trim data-line-numbers="|1-7|1, 9-13"><script type="text/template">
+						mis_compras = ["carne", "salsa picante", "cebolla"]
+						
+						for elem in mis_compras:
+							print(elem)
+						# 🖨️: carne
+						# 🖨️: salsa picante
+						# 🖨️: cebolla
+						
+						for articulo in mis_compras:
+							print(articulo)
+						# 🖨️: carne
+						# 🖨️: salsa picante
+						# 🖨️: cebolla
+					</script></code></pre>
+					<p>Un bucle <span class="editor-pink">for</span>  nos permite recorrer los envases que vimos en la primera parte y aplicar cualquier lógica a cada elemento.</p>
+				</section>
+				<section>
+					<h2>Recorriendo listas</h2>
+					<pre data-id="code-animation"><code class="python" data-trim data-line-numbers="|1-11|13-24|26-33|36-44|46-52"><script type="text/template">
+						mis_compras = ["carne", "salsa picante", "cebolla"]
+						
+						for indice, compra in enumerate(mis_compras):
+							print(indice)
+							print(compra)
+						# 🖨️: 0
+						# 🖨️: carne
+						# 🖨️: 1
+						# 🖨️: salsa picante
+						# 🖨️: 2
+						# 🖨️: cebolla
+
+						mis_compras = ["carne", "salsa picante", "cebolla"]
+						precios_colones = [4000, 1200, 300]
+						
+						for compra, precio in zip(mis_compras, precios_colones):
+							print(precio)
+							print(compra)
+						# 🖨️: 4000
+						# 🖨️: carne
+						# 🖨️: 1200
+						# 🖨️: salsa picante
+						# 🖨️: 300
+						# 🖨️: cebolla
+						
+						mis_compras = ["carne", "salsa picante", "cebolla"]
+						precios_colones = [4000, 1200, 300]
+						gastos = 0
+						
+						for precio in precios_colones:
+							gastos += precio
+						print(gastos)
+						# 🖨️: 5500
+
+
+						mis_compras = ["carne", "salsa picante", "cebolla"]
+						precios_colones = [4000, 1200, 300]
+						precios_dolares = []
+						
+						for precio in precios_colones:
+							precio_dolar = precio / 530
+							precios_dolares.append(precio_dolar)
+						print(precios_dolares)
+						# 🖨️: [7.547169811320755, 2.2641509433962264, 0.5660377358490566]
+
+						lista_de_numeros = []
+						for i in range(2000):
+							lista_de_numeros.append(i)
+						print(len(lista_de_numeros))
+						# 🖨️: 2000
+						print(lista_de_numeros[:-1])
+						# 🖨️: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10…
+
+					</script></code></pre>
+					<p><span class="editor-green">enumerate()</span> da el índice de cada elemento, <span class="editor-green">zip()</span> lleva a cabo bucles for en paralelo, <span class="editor-green">range()</span> define un rango que se recorre</p>
+				</section>
+				<section>
+					<h2>Recorriendo Diccionarios</h2>
+					<pre data-id="code-animation"><code class="python" data-trim data-line-numbers="|1-11|13-23|25-29|32-39|42-48"><script type="text/template">
+						mis_compras = {
+							'carne': 4000,
+							'salsa_picante': 1200,
+							'cebolla': 300,
+						}
+						
+						for clave, valor in mis_compras.items():
+							print(clave, valor)
+						# 🖨️: carne, 4000
+						# 🖨️: salsa_picante, 1200
+						# 🖨️: cebolla, 300
+
+						mis_compras = {
+							'carne': 4000,
+							'salsa_picante': 1200,
+							'cebolla': 300,
+						}
+						
+						for articulo, precio in mis_compras.items():
+							print(articulo, precio)
+						# 🖨️: carne, 4000
+						# 🖨️: salsa_picante, 1200
+						# 🖨️: cebolla, 300
+
+						compras_usd = {}
+						for articulo, precio in mis_compras.items():
+							compras_usd[articulo] = precio / 530
+						print(compras_usd)
+						# 🖨️: {'carne': 7.547169811320755, 'salsa_picante': 2.2641509433962264, 'cebolla': 0.5660377358490566}
+
+						
+						for articulo, precio in mis_compras.items():
+							nuevo_nombre = articulo + "_pali"
+							mis_compras[nuevo_nombre] = precio
+							mis_compras.pop(articulo)
+						# 🛑: RuntimeError: dictionary keys changed during iteration
+						# 🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨
+						# NUNCA NUNCA NUNCA MODIFICA UN ENVASE EN SU RECORRIDO
+						# 🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨
+						
+
+						mis_compras_ii = {}
+						for articulo, precio in mis_compras.items():
+							nuevo_nombre = articulo + "_pali"
+							mis_compras_ii[nuevo_nombre] = precio
+						del mis_compras
+						print(mis_compras_ii)
+						# 🖨️: {'carne_pali': 4000, 'salsa_picante_pali': 1200, 'cebolla_pali': 300}
+					</script></code></pre>
+					<p>la sentencia <span class="editor-pink">del</span> borra una variable</p>
+				</section>
+				<section>
+					<h2>Recorriendo Conjuntos y Tuplas</h2>
+					<pre data-id="code-animation"><code class="python" data-trim ><script type="text/template">
+						x = set([1, 10, 100])
+						for num in x:
+							print(num)
+						# 🖨️: 1
+						# 🖨️: 10
+						# 🖨️: 100
+
+						x = tuple([1, 10, 100])
+						for num in x:
+							print(num)
+						# 🖨️: 1
+						# 🖨️: 10
+						# 🖨️: 100
+					</script></code></pre>
+					<p>Aunque la posibildad exista, conjuntos y tuplas no se suelen recorrer en análisis de datos.</p>
+				</section>
+				<section>
+					<h1>Parte 3: Comprensiones</h1>
+					<p class="r-fit-text">Comprensiones representan una forma más concisa de implementar bucles for. Ya que bucles for apenas se usan con tuplas y conjuntos, descartaremos el uso de comprensiones para estos envases.</p>
+				</section>
+				<section>
+					<h2>Uso principal</h2>
+					<pre data-id="code-animation"><code class="python" data-trim data-line-numbers="|1-8|10-12|14-16"><script type="text/template">
+						mis_compras = ["carne", "salsa picante", "cebolla"]
+						mis_compras_pali = []
+
+						for articulo in mis_compras:
+							articulo_modificado = articulo + "_pali"
+							mis_compras_pali.append(articulo_modificado)
+						print(mis_compras_pali)
+						# 🖨️: ['carne_pali', 'salsa picante_pali', 'cebolla_pali']
+						
+						mis_compras_pali = [elem + "_pali" for elem in mis_compras]
+						print(mis_compras_pali)
+						# 🖨️: ['carne_pali', 'salsa picante_pali', 'cebolla_pali']
+
+						mis_compras_pali = [compra + "_pali" for compra in mis_compras]
+						print(mis_compras_pali)
+						# 🖨️: ['carne_pali', 'salsa picante_pali', 'cebolla_pali']
+					</script></code></pre>
+					<p>Cuando necesitas transformar un envase, comprensiones son idóneos.</p>
+				</section>
+				<section>
+					<h2>Comprensiones de Listas</h2>
+					<pre data-id="code-animation"><code class="python" data-trim data-line-numbers="|1-4|6-8|10-12|14-17"><script type="text/template">
+						numeros = [x for x in range(1000)]
+						suma = [x**2 for x in numeros]
+						print(suma)
+						# 🖨️: [0, 1, 4, 9, 16, 25, 36, 49…
+
+						suma = [x**2 for x in range(1000)]
+						print(suma)
+						# 🖨️: [0, 1, 4, 9, 16, 25, 36, 49…
+
+						suma = [z+y for z, y in zip([1, 2, 3], [1, 2, 3])]
+						print(suma)
+						# 🖨️: [2, 4, 6]
+
+						numeros = [0, 1, 2, 0, 1, 0]
+						es_cero = [num==0 for num in numeros]
+						print(sum(es_cero))
+						# 🖨️: 3
+					</script></code></pre>
+					<p>Cuando necesitas transformar un envase, comprensiones son idóneos.</p>
+				</section>
+				<section>
+					<h2>Comprensiones de Diccionarios</h2>
+					<pre data-id="code-animation"><code class="python" data-trim data-line-numbers="|1-4|6-8|10-12|14-17"><script type="text/template">
+						mis_compras = {
+							'carne': 4000,
+							'salsa_picante': 1200,
+							'cebolla': 300
+						}
+
+						mis_compras_usd = {
+							clave: valor / 530 for clave, valor in mis_compras.items()
+						}
+						print(mis_compras_usd)
+						# 🖨️: {'carne': 7.547169811320755, 'salsa_picante': 2.2641509433962264, 'cebolla': 0.5660377358490566}
+					</script></code></pre>
+				</section>
+				<section>
+					<h1>¡Ya está, gracias por su atención!</h1>
+					
+					<p>Haz clic <a href="https://docs.google.com/forms/d/e/1FAIpQLSfhmQIPYIAWl0bDprvyt5u1rLdb8r-6Wxkn8oBOzLdyoF83Fg/viewform?usp=sf_link" target="blank">aquí</a> para acceder a la tarea, la que necesitas entregar antes de la próxima lección. Tienen que entregarla 2 horas antes de la siguiente lección.</p>
+				</section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+				slideNumber: 'c/t',
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
