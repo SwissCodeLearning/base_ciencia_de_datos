@@ -3,7 +3,7 @@ Fundamentos esenciales en el uso de ciencia de datos
 
 
 ## Presentaciónes
-* Lección 1: https://rawcdn.githack.com/SwissCodeLearning/base_ciencia_de_datos/f2a5a8fdb7f12494ae9550b09899051c549db544/presentaciones/SCL101-L1.html
+* [Lección 1](https://rawcdn.githack.com/SwissCodeLearning/base_ciencia_de_datos/f2a5a8fdb7f12494ae9550b09899051c549db544/presentaciones/SCL101-L1.html)
 
 ## Glosario
 
